@@ -2,9 +2,13 @@
 
 int main(void){
 
-    for(int i = 1000; i >= 1; i-=5){
+    for(int i = 1000; i >= 1; i--){
+        if(i%5 == 0){
+            printf("\n");
+        }
+
         // print the number
-        printf("%d\t%d\t%d\t%d\t%d\n",i,i-1,i-2,i-3,i-4);
+        printf("%d\t",i);
     }
     return 0;
 }

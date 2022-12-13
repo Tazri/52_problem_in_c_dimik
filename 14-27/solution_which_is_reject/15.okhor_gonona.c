@@ -37,10 +37,7 @@ int main(void){
                 printf("%c = %d\n",c,count);
             }
         }
-        
-        if(test_case){
-            printf("\n");
-        }
+        printf("\n");
         
     }
 

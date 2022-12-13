@@ -37,7 +37,7 @@ int main(void){
         if(is_palindrome){
             printf("Yes! It is palindrome!\n");
         }else{
-            printf("Sorry! It is not Palindrome!\n");
+            printf("Sorry! It is not palindrome!\n");
         }
     }
     return 0;
