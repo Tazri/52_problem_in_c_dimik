@@ -2,39 +2,25 @@
 
 int main(void){
     // create necessary variable
-    int test;
-    double team_one, // team one run
-           team_two, // team two run
-           left_ball, // total left ball
-           current_average_run, // average run by over
-           need_average_run, // need average run rate to win
-           targeted_run, // targeted run to win
-           over_gone, // over gone 
-           over_left; // over left
-    
-    // get test
-    scanf("%d",&test);
+    int testcase, // total test case
+        r_one, // opponent run
+        r_two, // batsman run
+        ball_left, // ball left 
+        played; // total ball played
+        
+    double current_runrate, // current run rate 
+           need_runrate; // need run
 
-    while(test--){
-        // get team_one , team_two run and left_ball;
-        scanf("%lf %lf %lf",&team_one,&team_two,&left_ball);
+    scanf("%d",&testcase);
 
-        // targeted run
-        targeted_run = (team_one - team_two) + 1;
-
-        // calculate over gone and left
-        over_gone = (300-left_ball)/6;
-        over_left = left_ball/6;
-
-        // calculate current average run
-        current_average_run = team_two/over_gone;
-
-        // calaculate need_average_run_rate
-        need_average_run = targeted_run / over_left;
-
-        // print result
-        printf("%.2lf %.2lf\n",current_average_run,need_average_run);
-
+    while(testcase--){
+        scanf("%d %d %d",&r_one,&r_two,&ball_left);
+        
+        played = 300 - ball_left;
+        current_runrate = (r_two*1.0 / played*1.0) * 6.0;
+        need_runrate = ((r_one*1.0- r_two*1.0 +1)/ ball_left)*6.0;
+        
+        printf("%0.2lf %0.2lf\n\n",current_runrate,need_runrate);
     }
     return 0;
 }

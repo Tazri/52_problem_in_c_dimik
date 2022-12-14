@@ -1,14 +1,17 @@
 #include <stdio.h>
-#include <string.h>
 
 int main(void){
     // necessary variable
-    char s[1001], // for sentence which give from user
-         c; // for counting character
-    int test_case, // for how many time this program test
-        count, // for count charecter
-        length, // length of sentence(s)
-        i; // for iterate the array
+    char s[1010];
+    
+    int test_case, // for iterate
+        i,j; // for testcase
+
+    int count[26];
+
+    for(i=0;i<26;i++){
+        count[i] = 0;
+    }
 
     // get test_case
     scanf("%d",&test_case);
@@ -20,28 +23,20 @@ int main(void){
         scanf("%[^\n]",s);
         getchar();
 
-        // get length
-        length = strlen(s);
-
-        // start counting charecter
-        for(c = 'a'; c <= 'z';c++){
-            // traverse the sentence(s) for every charecter
-            count = 0;
-            for(i = 0; i < length;i++){
-                // if s[i] == c
-                count = s[i] == c ? count + 1 : count;   
-            }
-
-            // if count != 0
-            if(count){
-                printf("%c = %d\n",c,count);
+        for(i = 0;s[i] != '\0';i++){
+            if(s[i] >= 'a' && s[i] <= 'z'){
+                count[s[i] - 'a']++;
             }
         }
-        
-        if(test_case){
-            printf("\n");
+
+        for(i = 0;i < 26;i++){
+            if(count[i]){
+                printf("%c = %d\n",'a'+i,count[i]);
+                count[i] = 0;
+            }
         }
-        
+
+        printf("\n");
     }
 
     return 0;
