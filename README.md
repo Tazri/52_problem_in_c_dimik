@@ -29,6 +29,10 @@ I submit all the solution in [dimik oj](https://dimikoj.com/). But they can not 
 
 [![dimik oj](./asset/my_last_status.png)](https://dimikoj.com/profile/mdg?tazri)
 
+## Here Light OJ status of Those Problem
+
+![Light OJ](./asset/light_oj.png)
+
 ## Last Word
 
 I solve all the problem.I enjoy it so much and also learn something more new thing about c. One more thing. I learn new way to solve problem. Like find prime number use sieve of eratothenes algorithom new way.

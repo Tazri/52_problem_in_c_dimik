@@ -23,7 +23,7 @@ int main(void){
         }else if(c >= '0' && c <= '9'){
             printf("Numerical Digit\n");
         }else{
-            printf("Special Character\n");
+            printf("Special Characters\n");
         }
     }
 
